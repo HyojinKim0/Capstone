@@ -215,7 +215,7 @@ ORDER BY B.write_datetime DESC;  -- 최신 게시물 순으로 정렬
 
 
 -- 인기 검색어 리스트
-SELECT search_word, COUNT(search_word)
+SELECT search_word, COUNT(search_word) AS count
 FROM search_log
 WHERE relation IS FALSE
 GROUP BY search_word;
